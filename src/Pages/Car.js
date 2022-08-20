@@ -5,7 +5,7 @@ const Car = ({car}) => {
       const {name,description,img}=car;
       return (
             <div>
-                  <div className="card  bg-secondary shadow-xl mt-5 text-base-300">
+            <div className="card bg-transparent border shadow-xl mt-5 text-base-300">
                         <figure><img src={img}/></figure>
                         <div className="card-body">
                               <h2 className="card-title">

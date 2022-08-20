@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Car from './Car';
-
+import redCar from '../assets/images/redCar.jpg'
 const Cars = () => {
       const [cars,setCars]=useState([]);
       useEffect(()=>{
@@ -11,7 +11,8 @@ const Cars = () => {
       },[])
  
       return (
-            <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-4 bg-gradient-to-r from-car-bg1 to-car-bg2'>
+            <div style={{background:`url(${redCar})`,backgroundRepeat:'no-repeat',backgroundAttachment:'fixed',backgroundSize:'100%'}}
+            className='grid sm:grid-cols-1 lg:grid-cols-3 gap-4 bg-transparent'>
                   {
                         cars.map(car=><Car key={car.id} car={car}></Car>)
                   }
