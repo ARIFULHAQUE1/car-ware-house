@@ -2,19 +2,27 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    colors:{
-      "car-bg1":"#1b202c",
-      "car-bg2":"#040509",
-      
-    },
+    
     extend: {
-      colors:{
-        "primary":"#94c5d9",
-        "secondary":"#747b84",
-        "accent":"#ffc801"
-       
-      }
+
     },
+  },
+  daisyui: {
+    themes: [
+      {
+        cartheme: {
+          primary: "#bde7eb",
+          secondary: "#1f2533",
+          accent: "#161719",
+         
+         
+         
+          "base-100": "#ffffff",
+        },
+      },
+      "dark",
+      "cupcake",
+    ],
   },
   plugins: [require("daisyui")],
 }

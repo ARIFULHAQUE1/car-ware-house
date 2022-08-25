@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Car = ({ car }) => {
-    
+const carCollection = ({car}) => {
       const { name, description, img, price, quantity, supplyer } = car;
       return (
             <div>
-                  <div className="card  bg-transparent border shadow-xl mt-10 text-base-300  ">
+                  <div className="card  bg-transparent border shadow-xl mt-5 text-base-300  ">
                       
-                              <div  className='static ' >
+                              <div  className='static' >
                                     <figure className='h-72'><img src={img} /></figure>
 
                                     <div className="badge badge-error text-white mt-1 font-bold 4 absolute top-1/2" >Supplyer:{supplyer}</div>
@@ -24,17 +23,19 @@ const Car = ({ car }) => {
 
                                     </h2>
                                     <div>
-                                    Price: <button className='text-xl text-white p-1 btn-warning rounded'> ${price}</button>
-                                          
+                                          <h2 >
+                                                Price: <span className=' text-2xl underline'>${price}</span>
+
+                                          </h2>
                                     </div>
                               </div>
 
                               <p>{description}</p>
                               <div className="card-actions justify-end">
 
-                                    <div className="badge badge-error text-white  font-bold">Available:{quantity}</div>
+                                    <div className="badge badge-error text-white font-bold">Available:{quantity}</div>
 
-                                    <Link className="badge badge-warning text-white font-bold" to={'/manageInventory'}>Update</Link>
+                                    <button className='badge badge-success rounded-xl text-white font-bold'>Delivered</button>
 
 
                               </div>
@@ -44,4 +45,4 @@ const Car = ({ car }) => {
       );
 };
 
-export default Car;
+export default carCollection;

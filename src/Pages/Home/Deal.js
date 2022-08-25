@@ -9,7 +9,7 @@ const Deal = () => {
     <div>
       <h1 class="text-5xl font-bold">Make a Deal With Us!</h1>
       <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button class="btn bg-accent border-0">Make Deal</button>
+      <button class="btn bg-yellow-400 border-0 text-white">Make Deal</button>
     </div>
   </div>
 </div>
