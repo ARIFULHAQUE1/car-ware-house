@@ -13,19 +13,10 @@ const Navbar = () => {
                                     <ul tabindex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-secondary rounded-box w-52 ">
                                           <li><Link to={'/about'}>About</Link></li>
                                           <li><Link to={'/contact'}>Contact</Link></li>
-                                          <li tabindex="0">
+                                          <li><Link to={'/myItem'}>My Item</Link></li>
+                                                      <li><Link to={'/manageItem'}>Manage Item</Link></li>
 
-                                                <ul className="p-2 bg-secondary
-                                                ">
-                                                      <li><Link to={'/myItem'}>My Item</Link></li>
-                                                      <li><Link to={'/manageInventory'}>ManageInventory</Link></li>
-
-                                                </ul>
-                                                <a className="justify-between">
-                                                      More
-                                                      <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-                                                </a>
-                                          </li>
+                                          
 
                                     </ul>
                               </div>
@@ -37,17 +28,10 @@ const Navbar = () => {
                                     <li><Link to={'/about'}>About</Link></li>
 
                                     <li><Link to={'/contact'}>Contact</Link></li>
-                                    <li tabindex="0">
-                                          <ul className="p-2">
-                                                <li><Link to={'/myItem'}>My Item</Link></li>
-                                                <li><Link to={'/manageInventory'}>ManageInventory</Link></li>
-                                          </ul>
-                                          <a>
-                                                More
-                                                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-                                          </a>
+                                    <li><Link to={'/myItem'}>My Item</Link></li>
+                                                      <li><Link to={'/manageItem'}>Manage Item</Link></li>
 
-                                    </li>
+                                    
 
                               </ul>
                         </div>

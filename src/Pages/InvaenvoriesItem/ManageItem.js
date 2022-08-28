@@ -1,14 +1,15 @@
 import React from 'react';
-import ManageInventorys from '../Invaenvories/ManageInventorys';
+import ManageInventorys from './ManageInventorys';
 
 
-const ManageInventory = () => {
+const ManageItem = () => {
 
       return (
             <div>
+                 
                   <ManageInventorys></ManageInventorys>
             </div>
       );
 };
 
-export default ManageInventory;
+export default ManageItem;

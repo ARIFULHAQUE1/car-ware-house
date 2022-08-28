@@ -5,7 +5,7 @@ import Navbar from "./Pages/Shared/Navbar";
 import About from './Pages/Info/About';
 import Contact from './Pages/Info/Contact';
 import Blog from './Pages/Info/Blog'
-import ManageInventory from "./Pages/Invaenvories/ManageInventory";
+import ManageItem from "./Pages/InvaenvoriesItem/ManageItem";
 import MyItem from "./Pages/Home/MyItem";
 import Login from "./Pages/Authentication/Login";
 function App() {
@@ -19,7 +19,8 @@ function App() {
         <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/myItem" element={<MyItem></MyItem>}></Route>
-        <Route path="/manageInventory" element={<ManageInventory></ManageInventory>}></Route>
+        <Route path="/manageItem" element={<ManageItem></ManageItem>}></Route>
+        {/* <Route path="/addItem" element={<AddItem></AddItem>}></Route> */}
       </Routes>
       <Footer></Footer>
     </div>

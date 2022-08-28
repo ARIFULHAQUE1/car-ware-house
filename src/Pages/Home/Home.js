@@ -1,5 +1,5 @@
 import React from 'react';
-import Cars from '../Cars';
+import Inventorys from '../InvaenvoriesItem/Inventorys';
 
 import Banner from './Banner';
 import Deal from './Deal';
@@ -8,7 +8,7 @@ const Home = () => {
       return (
             <div>
                   <Banner></Banner>
-                  <Cars></Cars>
+                 <Inventorys></Inventorys>
                   <Features></Features>
                   <Deal></Deal>
             </div>
