@@ -4,7 +4,7 @@ import oneLight from '../../assets/images/oneLight.jpg'
 const Banner = () => {
       return (
 
-            <div class="hero sm:min-w-full  lg:min-h-screen" style={{backgroundImage: `url(${oneLight})`}}>
+            <div className="hero sm:min-w-full  lg:min-h-screen" style={{backgroundImage: `url(${oneLight})`}}>
                   <div className="hero-overlay bg-opacity-10"></div>
                   <div className="hero-content text-neutral-content">
                         <div className=" mb-14 lg:ml-24 text-base-100 ">

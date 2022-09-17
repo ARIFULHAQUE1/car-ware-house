@@ -17,12 +17,12 @@ const Inventorys = () => {
                         className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-transparent'>
                         {
                         cars.slice(0,6).map(car=>
-                              <Inventory key={car.id} car={car}></Inventory>)
+                              <Inventory key={car._id} car={car} ></Inventory>)
                               
                           
                         }
                   </div>
-                  <div className='p-5 flex justify-end text-xl font-bold text-primary pl-5'><Link to={'/manageInventory'}>ManageInventory &#10095;&#10095;</Link></div>
+                  <div className='p-5 flex justify-end text-xl font-bold text-primary pl-5'><Link to={'/manageItem'}>ManageInventory &#10095;&#10095;</Link></div>
             </div>
 
       );

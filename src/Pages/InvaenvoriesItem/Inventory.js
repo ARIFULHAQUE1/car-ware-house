@@ -1,15 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const Car = ({ car }) => {
+const Inventory = ({ car }) => {
     
-      const { name, description, img, price, quantity, supplyer } = car;
+      const { name, description, img, price, quantity, supplyer, _id } = car;
+      const navigate = useNavigate();
+
+      
+      const updateItem = (id) =>{
+            navigate(`/update/${_id}`)
+      }
+     
+       
+      
       return (
             <div>
+                 
+                 
                   <div className="card  bg-transparent border shadow-xl mt-10 text-base-300  ">
                       
                               <div  className='static ' >
-                                    <figure className='h-72'><img src={img} /></figure>
+                                    <figure className='h-72'><img src={img} alt={name} /></figure>
 
                                     <div className="badge badge-error text-white mt-1 font-bold 4 absolute top-1/2" >Supplyer:{supplyer}</div>
                               </div>
@@ -34,10 +45,11 @@ const Car = ({ car }) => {
 
                                     <div className="badge badge-error text-white  font-bold">Available:{quantity}</div>
 
-                                    <Link className="badge badge-warning text-white font-bold" to={'/manageInventory'}>Update</Link>
-
+                                    <button onClick={()=>updateItem(_id)} className="badge
+                                     badge-warning text-white font-bold" >Update</button>                                  
 
                               </div>
+                              
                         </div>
                   </div>
                   
@@ -45,4 +57,4 @@ const Car = ({ car }) => {
       );
 };
 
-export default Car;
+export default Inventory;
