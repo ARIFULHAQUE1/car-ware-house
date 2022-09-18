@@ -1,10 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import useInventory from '../Hooks/useInventory';
 
 
 
 const ManageInventory = ({ car }) => {
-      const { name, description, img, price, quantity, supplyer,_id } = car;
+      const [cars,setCars] = useInventory([]);
+      const { name, description, img, price, quantity,delivered, supplyer,_id } = car;
      const navigate = useNavigate()
 
       const handleRemove =(id)=>{
@@ -18,6 +21,12 @@ const ManageInventory = ({ car }) => {
                   .then(res=>res.json())
                   .then(data=>{
                         console.log(data)
+                        if(data.deletedCount){
+                              console.log("deleted")
+                              const remaining = cars.filter(car=>car._id !==_id)
+                              toast.success("Deleted Successfully!")
+                              setCars(remaining)
+                        }
                   })
                }            
       }
@@ -68,7 +77,7 @@ const ManageInventory = ({ car }) => {
                                                 <path d="M8.25 19.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0zM15.75 6.75a.75.75 0 00-.75.75v11.25c0 .087.015.17.042.248a3 3 0 015.958.464c.853-.175 1.522-.935 1.464-1.883a18.659 18.659 0 00-3.732-10.104 1.837 1.837 0 00-1.47-.725H15.75z" />
                                                 <path d="M19.5 19.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" />
                                           </svg>
-                                          <small className='text-success font-semibold'>Delivered: 10</small>
+                                          <small className='text-success font-semibold'>Delivered: {delivered}</small>
                                     </div>
                               </div>
 

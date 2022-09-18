@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useInventory = () => {
       const [cars, setCars] = useState([]);
@@ -7,7 +7,7 @@ const useInventory = () => {
                   .then(res => res.json())
                   .then(data => setCars(data))
 
-      }, [])
+      }, [cars])
       return [cars,setCars];
 };
 
